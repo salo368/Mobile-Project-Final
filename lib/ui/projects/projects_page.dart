@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../bottomBar/bottom_bar.dart';
+import 'projects_resume.dart';
 
 class ProjectsPage extends StatefulWidget {
   const ProjectsPage({Key? key}) : super(key: key);
@@ -47,7 +48,8 @@ class _ProjectsPageState extends State<ProjectsPage> {
                       fillColor: Colors.transparent, // Establece el color de relleno del TextField como transparente
                       border: InputBorder.none,
                       hintText: 'Search',
-                      contentPadding: EdgeInsets.only(bottom: 11.5, left: 20.0, right: 8.0),
+                      contentPadding: EdgeInsets.only(bottom: 11.5, left: 0, right: 8.0),
+                      prefixIcon: Icon(Icons.search, color: Color.fromARGB(255, 92, 92, 92)),
                     ),
                   ),
                 ),
@@ -68,7 +70,7 @@ class _ProjectsPageState extends State<ProjectsPage> {
                           backgroundColor: MaterialStateProperty.all<Color>(const Color.fromARGB(255, 158, 119, 207)),
                         ),
                         child: const Text(
-                          'Nuevo proyecto +',
+                          'New project +',
                           style: TextStyle(fontSize: 17.0,color: Color.fromARGB(255, 66, 37, 102)),
                         ),
                       ),
@@ -78,18 +80,16 @@ class _ProjectsPageState extends State<ProjectsPage> {
               ),
             ),
             Expanded(
-              child: Padding(
-                padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-                child: ListView(
-                  children: <Widget>[
-                    for (int i = 0; i < 20; i++)
-                      ListTile(
-                        title: Text('Elemento $i'),
-                      ),
-                  ],
-                ),
-              ),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 15),
+            child: ListView(
+              children: <Widget>[
+                for (int i = 0; i < 5; i++)
+                  const ProjectResume(),
+              ],
             ),
+          ),
+        ),
           ],
         ),
       ),
