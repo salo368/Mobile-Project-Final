@@ -67,11 +67,11 @@ class _ProjectsPageState extends State<ProjectsPage> {
                           // Función que se ejecuta al presionar el botón
                         },
                         style: ButtonStyle(
-                          backgroundColor: MaterialStateProperty.all<Color>(const Color.fromARGB(255, 158, 119, 207)),
+                          backgroundColor: MaterialStateProperty.all<Color>(const Color.fromARGB(255, 151, 119, 226)),
                         ),
                         child: const Text(
                           'New project +',
-                          style: TextStyle(fontSize: 17.0,color: Color.fromARGB(255, 66, 37, 102)),
+                          style: TextStyle(fontSize: 17.0,color: Color.fromARGB(255, 255, 255, 255)),
                         ),
                       ),
                     ),

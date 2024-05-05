@@ -19,8 +19,27 @@ class _ProjectResumeState extends State<ProjectResume> {
           border: Border.all(width: 2, color: const Color.fromARGB(255, 109, 166, 145)), // Borde de 2px
           color: const Color.fromARGB(255, 233, 236, 227),
         ),
+        child: Row(
+          children: [
+           Padding(
+              padding: const EdgeInsets.only(left: 15.0),
+              child: Container(
+                width: 86,
+                height: 86,
+                decoration: BoxDecoration(
+                  color: const Color.fromARGB(255, 17, 102, 79), // Color de ejemplo
+                  borderRadius: BorderRadius.circular(23.0), // Radio de las esquinas
+                ),
+              ),
+            ),
+            Expanded(
+              child: Container(
+                 // Color de ejemplo
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
 }
-//(244, 246, 238)
