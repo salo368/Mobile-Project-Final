@@ -30,7 +30,7 @@ class _ProjectsPageState extends State<ProjectsPage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Padding(
-              padding: const EdgeInsets.only(top: 10, bottom: 5, left: 10.0, right: 10.0),
+              padding: const EdgeInsets.only(top: 10, bottom: 10, left: 15.0, right: 15.0),
               child: SizedBox(
                 width: double.infinity,
                 height: 36.0,
@@ -54,12 +54,27 @@ class _ProjectsPageState extends State<ProjectsPage> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 20),
-              child: ElevatedButton(
-                onPressed: () {
-                  // Función que se ejecuta al presionar el botón
-                },
-                child: const Text('Botón'),
+              padding: const EdgeInsets.only(bottom: 5, left: 15.0, right: 15.0),
+              child: SizedBox(
+                height: 36.0,
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: ElevatedButton(
+                        onPressed: () {
+                          // Función que se ejecuta al presionar el botón
+                        },
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all<Color>(const Color.fromARGB(255, 158, 119, 207)),
+                        ),
+                        child: const Text(
+                          'Nuevo proyecto +',
+                          style: TextStyle(fontSize: 17.0,color: Color.fromARGB(255, 66, 37, 102)),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
             Expanded(
