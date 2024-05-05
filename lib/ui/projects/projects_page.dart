@@ -20,31 +20,62 @@ class _ProjectsPageState extends State<ProjectsPage> {
           style: TextStyle(
             color: Color(0xFF0CA06C),
             fontFamily: 'Roboto', // Cambia la fuente del texto del título
-            fontSize: 22, // Cambia el tamaño del texto del título
+            fontSize: 25, // Cambia el tamaño del texto del título
           ),
         ),
         toolbarHeight: 50,
       ),
       body: SafeArea(
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-
-              ListView.builder(
-                physics: const NeverScrollableScrollPhysics(), // Deshabilita el scroll del ListView
-                shrinkWrap: true, // Permite que el ListView tome el tamaño de su contenido
-                itemCount: 20, // Ejemplo de 10 proyectos
-                itemBuilder: (context, index) {
-                  return ListTile(
-                    title: Text('Proyecto ${index + 1}'),
-                    onTap: () {
-                      // Acción al seleccionar un proyecto
-                    },
-                  );
-                },
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.only(top: 10, bottom: 5, left: 10.0, right: 10.0),
+              child: SizedBox(
+                width: double.infinity,
+                height: 36.0,
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10.0), // Ajusta este valor según sea necesario
+                    color: Colors.grey[300],
+                  ),
+                  child: const TextField(
+                    style: TextStyle(fontSize: 17.0),
+                    cursorColor: Color.fromARGB(255, 49, 49, 49),
+                    decoration: InputDecoration(
+                      filled: true,
+                      fillColor: Colors.transparent, // Establece el color de relleno del TextField como transparente
+                      border: InputBorder.none,
+                      hintText: 'Search',
+                      contentPadding: EdgeInsets.only(bottom: 11.5, left: 20.0, right: 8.0),
+                    ),
+                  ),
+                ),
               ),
-            ],
-          ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 20),
+              child: ElevatedButton(
+                onPressed: () {
+                  // Función que se ejecuta al presionar el botón
+                },
+                child: const Text('Botón'),
+              ),
+            ),
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+                child: ListView(
+                  children: <Widget>[
+                    for (int i = 0; i < 20; i++)
+                      ListTile(
+                        title: Text('Elemento $i'),
+                      ),
+                  ],
+                ),
+              ),
+            ),
+          ],
         ),
       ),
       bottomNavigationBar: const BottomNavigation(barState:0),
