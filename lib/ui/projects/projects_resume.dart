@@ -32,9 +32,55 @@ class _ProjectResumeState extends State<ProjectResume> {
                 ),
               ),
             ),
-            Expanded(
-              child: Container(
-                 // Color de ejemplo
+            const Expanded(
+              child: Padding(
+                padding: EdgeInsets.fromLTRB(5, 10, 20, 5),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "UI/UX Design",
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    // Espacio entre el título y el subtítulo
+                    Text(
+                      "En Proceso",
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.normal,
+                      ),
+                    ),
+                    // Espacio entre el subtítulo y la fecha
+                    Text(
+                      "02/05/2024",
+                      style: TextStyle(
+                        fontSize: 12,
+                        fontWeight: FontWeight.normal,
+                      ),
+                    ),
+                    // Espacio entre la fecha y la barra de carga
+                    LinearProgressIndicator(
+                      value: 0.6, // Valor de la barra de carga (0.0 - 1.0)
+                      backgroundColor: Colors.grey,
+                      minHeight: 6,
+                      valueColor: AlwaysStoppedAnimation<Color>(Colors.green),
+                    ),
+                    Align(
+                      alignment: Alignment.centerRight,
+                      child: Text(
+                        "60% Completado",
+                        style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.normal,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ],
