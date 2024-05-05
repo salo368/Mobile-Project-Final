@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'bottom_bar_button.dart';
 
 class BottomNavigation extends StatefulWidget {
   const BottomNavigation({Key? key}) : super(key: key);
@@ -35,7 +36,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
                   color: barState == 0
                       ? const Color.fromARGB(255, 12, 160, 108)
                       : const Color.fromARGB(255, 12, 160, 108),
-                  child: ConditionalBarBottomButton(
+                  child: BottomBarButton(
                     icon: Icons.person,
                     text: "Profile",
                     useSecondButton: barState == 0 ? true : false,
@@ -57,7 +58,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
                   color: barState == 1
                       ? const Color.fromARGB(255, 12, 160, 108)
                       : const Color.fromARGB(255, 12, 160, 108),
-                  child: ConditionalBarBottomButton(
+                  child: BottomBarButton(
                     icon: Icons.home,
                     text: "Home",
                     useSecondButton: barState == 1 ? true : false,
@@ -79,7 +80,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
                   color: barState == 2
                       ? const Color.fromARGB(255, 12, 160, 108)
                       : const Color.fromARGB(255, 12, 160, 108),
-                  child: ConditionalBarBottomButton(
+                  child: BottomBarButton(
                     icon: Icons.grid_view_outlined,
                     text: "Projects",
                     useSecondButton: barState == 2 ? true : false,
@@ -101,7 +102,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
                   color: barState == 3
                       ? const Color.fromARGB(255, 12, 160, 108)
                       : const Color.fromARGB(255, 12, 160, 108),
-                  child: ConditionalBarBottomButton(
+                  child: BottomBarButton(
                     icon: Icons.bar_chart,
                     text: "Stats",
                     useSecondButton: barState == 3 ? true : false,
@@ -116,61 +117,4 @@ class _BottomNavigationState extends State<BottomNavigation> {
   }
 }
 
-class ConditionalBarBottomButton extends StatelessWidget {
-  final IconData icon;
-  final String text;
-  final bool useSecondButton;
 
-  const ConditionalBarBottomButton({
-    Key? key,
-    required this.icon,
-    required this.text,
-    required this.useSecondButton,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Expanded(
-      flex: 2,
-      child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 9, horizontal: 16),
-        child: AnimatedContainer(
-          duration: const Duration(milliseconds: 300),
-          height: 60,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(30),
-            color: useSecondButton
-                ? const Color.fromARGB(255, 167, 232, 209)
-                : Colors.transparent,
-          ),
-          child: Center(
-            child: useSecondButton
-                ? Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(
-                        icon,
-                        size: 32,
-                        color: const Color.fromARGB(255, 12, 160, 108),
-                      ),
-                      const SizedBox(width: 8),
-                      Text(
-                        text,
-                        style: const TextStyle(
-                          fontSize: 16,
-                          color: Color.fromARGB(255, 12, 160, 108),
-                        ),
-                      ),
-                    ],
-                  )
-                : Icon(
-                    icon,
-                    size: 32,
-                    color: const Color.fromARGB(255, 167, 232, 209),
-                  ),
-          ),
-        ),
-      ),
-    );
-  }
-}
