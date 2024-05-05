@@ -46,7 +46,6 @@ class _ProjectResumeState extends State<ProjectResume> {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    // Espacio entre el título y el subtítulo
                     Text(
                       "En Proceso",
                       style: TextStyle(
@@ -54,7 +53,6 @@ class _ProjectResumeState extends State<ProjectResume> {
                         fontWeight: FontWeight.normal,
                       ),
                     ),
-                    // Espacio entre el subtítulo y la fecha
                     Text(
                       "02/05/2024",
                       style: TextStyle(
@@ -62,7 +60,6 @@ class _ProjectResumeState extends State<ProjectResume> {
                         fontWeight: FontWeight.normal,
                       ),
                     ),
-                    // Espacio entre la fecha y la barra de carga
                     LinearProgressIndicator(
                       value: 0.6, // Valor de la barra de carga (0.0 - 1.0)
                       backgroundColor: Colors.grey,

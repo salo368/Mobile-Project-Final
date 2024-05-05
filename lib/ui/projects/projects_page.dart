@@ -93,7 +93,7 @@ class _ProjectsPageState extends State<ProjectsPage> {
           ],
         ),
       ),
-      bottomNavigationBar: const BottomNavigation(barState:0),
+      bottomNavigationBar: const BottomNavigation(barState:2),
     );
   }
 }
