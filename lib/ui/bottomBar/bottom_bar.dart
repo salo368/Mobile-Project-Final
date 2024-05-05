@@ -2,14 +2,22 @@ import 'package:flutter/material.dart';
 import 'bottom_bar_button.dart';
 
 class BottomNavigation extends StatefulWidget {
-  const BottomNavigation({Key? key}) : super(key: key);
+  final int barState; // Parámetro barState agregado al constructor
+
+  const BottomNavigation({Key? key, required this.barState}) : super(key: key);
 
   @override
   State<BottomNavigation> createState() => _BottomNavigationState();
 }
 
 class _BottomNavigationState extends State<BottomNavigation> {
-  int barState = 0;
+  late int barState; // Cambiado para ser inicializado en el initState
+
+  @override
+  void initState() {
+    super.initState();
+    barState = widget.barState; // Inicializa barState con el valor pasado desde el constructor
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -116,5 +124,3 @@ class _BottomNavigationState extends State<BottomNavigation> {
     );
   }
 }
-
-

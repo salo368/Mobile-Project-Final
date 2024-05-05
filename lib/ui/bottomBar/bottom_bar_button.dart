@@ -19,7 +19,7 @@ class BottomBarButton extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 9, horizontal: 16),
         child: AnimatedContainer(
-          duration: const Duration(milliseconds: 300),
+          duration: const Duration(milliseconds: 200),
           height: 60,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(30),
