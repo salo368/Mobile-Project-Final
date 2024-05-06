@@ -62,7 +62,7 @@ class NewServiceP extends StatelessWidget {
                 children: <Widget>[
                   TextButton(
                     onPressed: () {
-                      Get.toNamed("/newServicePage");
+                      Get.toNamed("/servicePage");
                     },
                     style: TextButton.styleFrom(
                       foregroundColor: Colors.grey,

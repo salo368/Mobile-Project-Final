@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 import 'project_stages_widget.dart';
+import 'project_next_bar.dart';
 
 class NewProjectPage extends StatefulWidget {
   const NewProjectPage({super.key});
@@ -254,92 +255,7 @@ class _NewProjectPageState extends State<NewProjectPage> {
         ],
       ),
     ),
-    bottomNavigationBar: ClipRRect(
-      child: Container(
-        color: Colors.white, // Cambia el color de fondo según sea necesario
-        child: Row(
-          children: [
-            Expanded(
-              flex: 1,
-              child: GestureDetector(
-                onTap: () {
-                  
-                },
-                child: Expanded(
-                  flex: 2,
-                  child: Padding(
-                    padding: const EdgeInsets.only(top: 9, bottom: 12, left: 18.0, right: 9.0),
-                    child: AnimatedContainer(
-                      duration: const Duration(milliseconds: 200),
-                      height: 40,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(30),
-                        color: Colors.transparent, // Cambiado a transparente
-                        border: Border.all(
-                          color: const Color.fromARGB(255, 12, 160, 108), // Borde verde
-                          width: 2, // Ancho de borde 2px
-                        ),
-                      ),
-                      child: const Center(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              "Omitir",
-                              style: TextStyle(
-                                fontSize: 19,
-                                color: Color.fromARGB(255, 12, 160, 108), // Letras de color verde
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            Expanded(
-              flex: 1,
-              child: GestureDetector(
-                onTap: () {
-                  Get.toNamed("/newServicePage");
-                },
-                child: Expanded(
-                  flex: 2,
-                  child: Padding(
-                    padding: const EdgeInsets.only(top: 9, bottom: 12, left: 9.0, right: 18.0),
-                    child: AnimatedContainer(
-                      duration: const Duration(milliseconds: 200),
-                      height: 40,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(30),
-                        color: const Color.fromARGB(255, 10, 136, 92)
-                            ,
-                      ),
-                      child: const Center(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              "Aceptar",
-                              style: TextStyle(
-                                fontSize: 19,
-                                color: Colors.white,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
-    ),
+    bottomNavigationBar: const ProjectNextBar(route: "/servicePage",)
   );
  }
 }

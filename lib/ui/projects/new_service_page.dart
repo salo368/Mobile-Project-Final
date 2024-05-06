@@ -25,7 +25,7 @@ class CrearServicioPage extends StatelessWidget {
           color: const Color.fromARGB(255, 34, 161, 134),
           icon: const Icon(Icons.arrow_back),
           onPressed: () {
-            Get.toNamed("/newProjectPage");
+            Get.toNamed("/servicePage");
           }, // Este botón permitirá regresar a la pantalla anterior
         ),
       ),

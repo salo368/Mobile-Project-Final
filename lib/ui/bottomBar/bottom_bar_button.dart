@@ -24,7 +24,7 @@ class BottomBarButton extends StatelessWidget {
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(30),
             color: useSecondButton
-                ? const Color.fromARGB(255, 167, 232, 209)
+                ? const Color.fromARGB(255, 205, 255, 238)
                 : Colors.transparent,
           ),
           child: Center(
@@ -50,7 +50,7 @@ class BottomBarButton extends StatelessWidget {
                 : Icon(
                     icon,
                     size: 32,
-                    color: const Color.fromARGB(255, 167, 232, 209),
+                    color: const Color.fromARGB(255, 205, 255, 238),
                   ),
           ),
         ),
