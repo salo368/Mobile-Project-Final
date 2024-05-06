@@ -6,7 +6,6 @@ class CrearServicioPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // Define el color verde para las etiquetas y el botón
-    const Color greenColor = Color(0xFF4CAF50);
 
     return Scaffold(
       appBar: AppBar(
