@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'projects_resume.dart';
+import 'services_resume.dart';
 import 'project_next_bar.dart';
+import 'project_stages_widget.dart';
 
 class ServicePage extends StatefulWidget {
   const ServicePage({Key? key}) : super(key: key);
@@ -38,6 +39,7 @@ class _ServicePageState extends State<ServicePage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
+            const StagesWidget(stage: 2),
             Padding(
               padding: const EdgeInsets.only(top: 10, bottom: 10, left: 15.0, right: 15.0),
               child: SizedBox(
@@ -93,7 +95,7 @@ class _ServicePageState extends State<ServicePage> {
                 child: ListView(
                   children: <Widget>[
                     for (int i = 0; i < 3; i++)
-                      const ProjectResume(),
+                      const ServiceResume(),
                   ],
                 ),
               ),
