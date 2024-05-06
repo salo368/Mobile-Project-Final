@@ -11,12 +11,12 @@ class ProjectNextBar extends StatefulWidget {
 }
 
 class _ProjectNextBarState extends State<ProjectNextBar> {
-  late String route; // Cambiado para ser inicializado en el initState
+  late String router; // Cambiado para ser inicializado en el initState
 
   @override
   void initState() {
     super.initState();
-    route = widget.route;
+    router = widget.route;
   }
 
   @override
@@ -70,7 +70,7 @@ class _ProjectNextBarState extends State<ProjectNextBar> {
               flex: 1,
               child: GestureDetector(
                 onTap: () {
-                  Get.toNamed(route);
+                  Get.toNamed(router);
                 },
                 child: Expanded(
                   flex: 2,

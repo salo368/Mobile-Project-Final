@@ -255,7 +255,8 @@ class _NewProjectPageState extends State<NewProjectPage> {
         ],
       ),
     ),
-    bottomNavigationBar: const ProjectNextBar(route: "/servicePage",)
+    // ignore: prefer_const_constructors
+    bottomNavigationBar: ProjectNextBar(route: "/servicePage")
   );
  }
 }
