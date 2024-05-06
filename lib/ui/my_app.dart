@@ -18,7 +18,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: '/newServicePPage',
+      initialRoute: '/projectsPage',
       getPages: [
         GetPage(name: '/projectsPage', page: () => const ProjectsPage()),
         GetPage(name: '/newProjectPage', page: () => const NewProjectPage()),
