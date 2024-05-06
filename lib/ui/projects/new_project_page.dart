@@ -4,10 +4,11 @@ import 'package:intl/intl.dart';
 import 'project_stages_widget.dart';
 
 class NewProjectPage extends StatefulWidget {
-  const NewProjectPage({Key? key}) : super(key: key);
+  const NewProjectPage({super.key});
 
   @override
-  State<NewProjectPage> createState() => _NewProjectPageState();
+  // ignore: library_private_types_in_public_api
+  _NewProjectPageState createState() => _NewProjectPageState();
 }
 
 class _NewProjectPageState extends State<NewProjectPage> {
@@ -45,6 +46,7 @@ class _NewProjectPageState extends State<NewProjectPage> {
 
   @override
   Widget build(BuildContext context) {
+    return Scaffold(
     return Scaffold(
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(255, 228, 255, 245),
