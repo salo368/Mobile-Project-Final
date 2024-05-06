@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import '../bottomBar/bottom_bar.dart';
 import 'projects_resume.dart';
 
@@ -16,6 +17,7 @@ class _ProjectsPageState extends State<ProjectsPage> {
       appBar: AppBar(
         backgroundColor:  const Color.fromARGB(255, 228, 255, 245), // Cambia el color del fondo del AppBar a rojo
         elevation: 2,
+        automaticallyImplyLeading: false,
         title: const Text(
           "My projects",
           style: TextStyle(
@@ -64,7 +66,7 @@ class _ProjectsPageState extends State<ProjectsPage> {
                     Expanded(
                       child: ElevatedButton(
                         onPressed: () {
-                          // Función que se ejecuta al presionar el botón
+                          Get.toNamed("/newProjectPage");
                         },
                         style: ButtonStyle(
                           backgroundColor: MaterialStateProperty.all<Color>(const Color.fromARGB(255, 151, 119, 226)),
@@ -84,7 +86,7 @@ class _ProjectsPageState extends State<ProjectsPage> {
             padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 15),
             child: ListView(
               children: <Widget>[
-                for (int i = 0; i < 5; i++)
+                for (int i = 0; i < 13; i++)
                   const ProjectResume(),
               ],
             ),
