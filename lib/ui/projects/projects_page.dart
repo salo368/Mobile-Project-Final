@@ -82,16 +82,16 @@ class _ProjectsPageState extends State<ProjectsPage> {
               ),
             ),
             Expanded(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 15),
-            child: ListView(
-              children: <Widget>[
-                for (int i = 0; i < 13; i++)
-                  const ProjectResume(),
-              ],
+              child: Padding(
+                padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 15),
+                child: ListView(
+                  children: <Widget>[
+                    for (int i = 0; i < 13; i++)
+                      const ProjectResume(),
+                  ],
+                ),
+              ),
             ),
-          ),
-        ),
           ],
         ),
       ),

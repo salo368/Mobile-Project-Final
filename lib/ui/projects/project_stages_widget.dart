@@ -11,7 +11,7 @@ class StagesWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 12, bottom: 10, left: 25.0, right: 25.0),
+      padding: const EdgeInsets.only(top: 12, bottom: 12, left: 25.0, right: 25.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: <Widget>[
@@ -41,6 +41,7 @@ class StagesWidget extends StatelessWidget {
           style: TextStyle(
             color: numberC,
             fontWeight: FontWeight.bold,
+            fontSize: 15.0,
           ),
         ),
       ),
