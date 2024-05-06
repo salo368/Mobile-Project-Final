@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class NewServiceP extends StatelessWidget {
   const NewServiceP({super.key});
@@ -60,7 +61,9 @@ class NewServiceP extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Get.toNamed("/newServicePage");
+                    },
                     style: TextButton.styleFrom(
                       foregroundColor: Colors.grey,
                       shape: RoundedRectangleBorder(

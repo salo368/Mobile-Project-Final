@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class CrearServicioPage extends StatelessWidget {
   const CrearServicioPage({super.key});
@@ -23,8 +24,9 @@ class CrearServicioPage extends StatelessWidget {
         leading: IconButton(
           color: const Color.fromARGB(255, 34, 161, 134),
           icon: const Icon(Icons.arrow_back),
-          onPressed: () => Navigator.of(context)
-              .pop(), // Este botón permitirá regresar a la pantalla anterior
+          onPressed: () {
+            Get.toNamed("/newProjectPage");
+          }, // Este botón permitirá regresar a la pantalla anterior
         ),
       ),
       body: Padding(
@@ -64,7 +66,7 @@ class CrearServicioPage extends StatelessWidget {
             const SizedBox(height: 32),
             ElevatedButton(
               onPressed: () {
-                // Acción al presionar el botón
+                Get.toNamed("/newServicePPage");
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: const Color.fromARGB(255, 34, 161, 134),

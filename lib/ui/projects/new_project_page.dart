@@ -260,50 +260,50 @@ class _NewProjectPageState extends State<NewProjectPage> {
         child: Row(
           children: [
             Expanded(
-  flex: 1,
-  child: GestureDetector(
-    onTap: () {
-      
-    },
-    child: Expanded(
-      flex: 2,
-      child: Padding(
-        padding: const EdgeInsets.only(top: 9, bottom: 12, left: 18.0, right: 9.0),
-        child: AnimatedContainer(
-          duration: const Duration(milliseconds: 200),
-          height: 40,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(30),
-            color: Colors.transparent, // Cambiado a transparente
-            border: Border.all(
-              color: const Color.fromARGB(255, 12, 160, 108), // Borde verde
-              width: 2, // Ancho de borde 2px
-            ),
-          ),
-          child: const Center(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  "Omitir",
-                  style: TextStyle(
-                    fontSize: 19,
-                    color: Color.fromARGB(255, 12, 160, 108), // Letras de color verde
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ),
-      ),
-    ),
-  ),
-),
-            Expanded(
               flex: 1,
               child: GestureDetector(
                 onTap: () {
                   
+                },
+                child: Expanded(
+                  flex: 2,
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 9, bottom: 12, left: 18.0, right: 9.0),
+                    child: AnimatedContainer(
+                      duration: const Duration(milliseconds: 200),
+                      height: 40,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(30),
+                        color: Colors.transparent, // Cambiado a transparente
+                        border: Border.all(
+                          color: const Color.fromARGB(255, 12, 160, 108), // Borde verde
+                          width: 2, // Ancho de borde 2px
+                        ),
+                      ),
+                      child: const Center(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              "Omitir",
+                              style: TextStyle(
+                                fontSize: 19,
+                                color: Color.fromARGB(255, 12, 160, 108), // Letras de color verde
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            Expanded(
+              flex: 1,
+              child: GestureDetector(
+                onTap: () {
+                  Get.toNamed("/newServicePage");
                 },
                 child: Expanded(
                   flex: 2,
@@ -314,23 +314,22 @@ class _NewProjectPageState extends State<NewProjectPage> {
                       height: 40,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(30),
-                        color: const Color.fromARGB(255, 167, 232, 209)
+                        color: const Color.fromARGB(255, 10, 136, 92)
                             ,
                       ),
                       child: const Center(
                         child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Text(
-                                    "Aceptar",
-                                    style: TextStyle(
-                                      fontSize: 19,
-                                      color: Color.fromARGB(255, 12, 160, 108),
-                                    ),
-                                  ),
-                                ],
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              "Aceptar",
+                              style: TextStyle(
+                                fontSize: 19,
+                                color: Colors.white,
                               ),
-                            
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),
