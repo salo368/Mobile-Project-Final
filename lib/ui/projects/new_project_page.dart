@@ -47,7 +47,6 @@ class _NewProjectPageState extends State<NewProjectPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-    return Scaffold(
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(255, 228, 255, 245),
         elevation: 2,
